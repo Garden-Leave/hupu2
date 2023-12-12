@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请登录</title>
+</head>
+<body>
+<h1 style="top:200px;left:700px;position:relative">这里是登录页面</h1>
+<form method="post" style="top:200px;left:700px;position:relative;height:200px;width:200px">
+    <input type="text" name="id"> <br></br>
+    <input type="text" name="city"><br></br>
+    <input type="submit" value="submit">
+    <h2 style="color:blue">{{error}}</h2>
+
+</form>
+
+<p style="color:red">My cat is <strong>very</strong> grumpy.</p>
+
+
+<!--img文件，可以直接写相对于html文件的相对路径，还可以在flask渲染时，根据app指定的static_folder='s1_dir',static_url_path='/happy'(默认/static)参数有关
+此时就会s1_dir下面找jwt.img,生成出来的url=/happy/jwt.jpg,-->
+<!--<img src="../static/jwt.jpg" alt="this is a pic for jwt"/>-->
+<img src="{{ url_for('static', filename='jwt.jpg')}}" />
+<!--<img src="/static/jwt.jpg">-->
+
+</body>
+</html>
