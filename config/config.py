@@ -5,8 +5,8 @@ class Config:
     target_url = 'https://bbs.hupu.com/search?q=%E6%9D%9C%E5%85%B0%E7%89%B9&topicId=240&sortby=light&page=1'
 
     mail_server = "smtp.qq.com"  # 设置服务器
-    mail_user = "457638186@qq.com"  # 用户名
-    mail_pass = "ksdnbntsyyxxcbbh"  # 口令
+    mail_user = ""  # 用户名
+    mail_pass = ""  # 口令
     sender='457638186@qq.com'
     receivers=['457638186@qq.com']
 
