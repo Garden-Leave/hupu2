@@ -6,13 +6,13 @@ class Config:
 
     mail_server = "smtp.qq.com"  # 设置服务器
     mail_user = "457638186@qq.com"  # 用户名
-    mail_pass = "ksdnbntsyyxxcbbh"  # 口令
+    mail_pass = ""  # 口令
     sender='457638186@qq.com'
     receivers=['457638186@qq.com']
 
 
 class DB_Config:
-    host = '192.168.1.102'
+    host = '192.168.1.3'
     port = '3306'
     user = 'root'
     password = '111'
