@@ -19,8 +19,8 @@ dictConfig({
     'handlers': {
         'default': {
             'class': 'logging.handlers.RotatingFileHandler',  # 将日志消息发送到磁盘文件，并支持日志文件按大小切割
-            'filename': "C:/Users/x3/PycharmProjects/hupu2/logs/flask.log",  # 日志输出文件
-            'maxBytes': 1024 * 1024 * 5,  # 文件大小
+            'filename': "./logs/flask.log",  # 日志输出文件
+            'maxBytes': 1024 * 1024 * 1024,  # 文件大小
             'formatter': 'detail',  # 使用哪种formatters日志格式
             'encoding': 'utf-8'
         },
@@ -31,7 +31,7 @@ dictConfig({
         'error': {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': "C:/Users/x3/PycharmProjects/hupu2/logs/flask.log",
+            'filename': "./logs/flask.log",
             'maxBytes': 1024 * 1024 * 5,
             'backupCount': 5,  # 备份份数
             'formatter': 'detail',
@@ -40,7 +40,7 @@ dictConfig({
         'request_handler': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': "C:/Users/x3/PycharmProjects/hupu2/logs/flask.log",
+            'filename': "./logs/flask.log",
             'maxBytes': 1024 * 1024 * 5,
             'backupCount': 5,
             'formatter': 'standard',
@@ -77,4 +77,4 @@ if __name__ == '__main__':
         print(1/0)
     except Exception as err:
         print(err)
-        logger.error('task1 failed:{}'.format(err),exc_info=True)  # 将异常异常信息添加到日志消息中
+        logger.error('task1 failed:{}'.format(err),exc_info=True)  # 将异常信息添加到日志消息中

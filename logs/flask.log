@@ -1,0 +1,6 @@
+2024-01-24 11:38:28.944|17400|INFO|main.py|83|now starting app
+2024-01-24 11:38:42.590|10036|INFO|main.py|39|request info: ['/hello', 'GET', 'HTTP/1.1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'] status_code: 200
+2024-01-24 12:19:41.468|3148|INFO|main.py|39|request info: ['/hello', 'GET', 'HTTP/1.1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'] status_code: 200
+2024-01-24 12:19:42.190|18712|INFO|main.py|39|request info: ['/hello', 'GET', 'HTTP/1.1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'] status_code: 200
+2024-01-24 12:19:42.790|3328|INFO|main.py|39|request info: ['/hello', 'GET', 'HTTP/1.1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'] status_code: 200
+2024-01-24 12:21:30.963|14596|INFO|main.py|29|request info: ['/hupu?num=1', 'GET', 'HTTP/1.1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'] status_code: 200

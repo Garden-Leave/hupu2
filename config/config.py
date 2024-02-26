@@ -12,7 +12,7 @@ class Config:
 
 
 class DB_Config:
-    host = '192.168.1.102'
+    host = '192.168.1.3'
     port = '3306'
     user = 'root'
     password = '111'
