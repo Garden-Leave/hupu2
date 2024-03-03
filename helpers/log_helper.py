@@ -19,10 +19,11 @@ dictConfig({
     'handlers': {
         'default': {
             'class': 'logging.handlers.RotatingFileHandler',  # 将日志消息发送到磁盘文件，并支持日志文件按大小切割
-            'filename': "./logs/flask.log",  # 日志输出文件
-            'maxBytes': 1024 * 1024 * 1024,  # 文件大小
+            'filename': './logs/flask.log',  # 日志输出文件
+            'maxBytes': 1024 * 1024 * 500,  # 文件大小 500M切换一个
             'formatter': 'detail',  # 使用哪种formatters日志格式
-            'encoding': 'utf-8'
+            'encoding': 'utf-8',
+            'level': 'DEBUG'
         },
         'console': {
             'class': 'logging.StreamHandler',
@@ -31,8 +32,8 @@ dictConfig({
         'error': {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': "./logs/flask.log",
-            'maxBytes': 1024 * 1024 * 5,
+            'filename': './logs/flask.log',
+            'maxBytes': 1024 * 1024 * 500,
             'backupCount': 5,  # 备份份数
             'formatter': 'detail',
             'encoding': 'utf-8'
@@ -41,7 +42,7 @@ dictConfig({
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': "./logs/flask.log",
-            'maxBytes': 1024 * 1024 * 5,
+            'maxBytes': 1024 * 1024 * 1024,
             'backupCount': 5,
             'formatter': 'standard',
             'encoding': 'utf-8'
@@ -66,9 +67,9 @@ dictConfig({
     }
 })
 
-logger = logging.getLogger('flask')
+logger1 = logging.getLogger('flask')
 # print(id(logger),__name__,get_ident())
-logger.setLevel(logging.DEBUG)
+# logger1.setLevel(logging.DEBUG)
 
 if __name__ == '__main__':
     try:
