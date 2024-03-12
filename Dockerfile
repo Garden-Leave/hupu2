@@ -1,12 +1,8 @@
-
-FROM welersonb/python3.8-alpine
+FROM yankovg/python3.8.2-ubuntu18.04:latest
 WORKDIR /hupu
 #ENTRYPOINT ping
 COPY ./ /hupu
-#COPY __init__.py  /usr/local/lib/python3.7/site-packages/urllib3/__init__.py
 
-#RUN pip install --upgrade pip==20.3
-pip install -r requirements.txt
+RUN pip3.8 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
-#COPY __init__.py  /usr/local/lib/python3.7/site-packages/urllib3/__init__.py
-ENTRYPOINT python3 main.py
+ENTRYPOINT python3.8 main.py
