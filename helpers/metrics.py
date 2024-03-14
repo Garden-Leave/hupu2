@@ -2,7 +2,7 @@ from prometheus_client import Gauge, Counter, start_http_server
 import time
 
 
-c1 = Counter('request_total', 'total request handled',['pod','node','code'])
+c1 = Counter('request_total', 'total request handled', ['hostname','node','code'])
 g1 = Gauge('request_latency', 'latency per request')
 
 if __name__=='__main__':

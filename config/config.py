@@ -2,7 +2,7 @@ import logging
 from logging.config import dictConfig
 
 class Config:
-    target_url = 'https://bbs.hupu.com/search?q=%E6%9D%9C%E5%85%B0%E7%89%B9&topicId=240&sortby=light&page=1'
+    target_url = 'https://bbs.hupu.com/search?q=%E6%9D%9C%E5%85%B0%E7%89%B9&topicId&sortby=createtime&page=1'
 
     mail_server = "smtp.qq.com"  # 设置服务器
     mail_user = ""  # 用户名
