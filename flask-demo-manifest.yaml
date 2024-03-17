@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: flask
-          image: 'ccr.ccs.tencentyun.com/allen-images/flask-demo:g1'
+          image: 'ccr.ccs.tencentyun.com/allen-images/flask-demo:latest'
       imagePullSecrets:
         - name: tcloud-img
       schedulerName: default-scheduler
