@@ -1,0 +1,43 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: flask-demo
+  namespace: default
+  labels:
+    app: flask-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-demo
+  template:
+    metadata:
+      labels:
+        app: flask-demo
+    spec:
+      containers:
+        - name: flask
+          image: 'ccr.ccs.tencentyun.com/allen-images/flask-demo:g1'
+      imagePullSecrets:
+        - name: tcloud-img
+      schedulerName: default-scheduler
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-demo
+  namespace: default
+spec:
+  ports:
+  - name: web
+    port: 8000
+    protocol: TCP
+    targetPort: 5000
+  - name: metrics
+    port: 9090
+    protocol: TCP
+    targetPort: 9090
+  selector:
+    app: flask-demo
+  type: NodePort
