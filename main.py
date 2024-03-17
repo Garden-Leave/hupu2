@@ -63,6 +63,9 @@ def hello():
     logger1.info(log_req_record)
     return redirect('hello')
 
+@app.route('/test')
+def test():
+    return 'just a test page to test ci/cd '
 
 @app.after_request
 def metric_write(response):
