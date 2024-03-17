@@ -22,14 +22,17 @@ def get_hp():
         response = make_response('400：Bad Request, number should be > 0 ', 400, {"header": "test header"})
         logger1.info('400：Bad Request, number should be > 0 status_code: {}'.format(response.status_code))
     else:
-        fetch_parse(num)
+        try:
+            fetch_parse(num)
         # result = list2[0:num*2]
         #print(request.environ.items())
-        log_req_record=[request.environ['REQUEST_URI'], request.environ["REQUEST_METHOD"], request.environ['SERVER_PROTOCOL'],request.environ['REMOTE_ADDR'],request.environ['HTTP_USER_AGENT']]
+            log_req_record=[request.environ['REQUEST_URI'], request.environ["REQUEST_METHOD"], request.environ['SERVER_PROTOCOL'],request.environ['REMOTE_ADDR'],request.environ['HTTP_USER_AGENT']]
         # logger.warning(log_req_record)
-        response = make_response(render_template('result.html'), 200, {"header": "test header"})
+            response = make_response(render_template('result.html'), 200, {"header": "test header"})
         #response = make_response(jsonify(result), 200, {"header1": "jordan"})
-        logger1.info('request info: {} status_code: {}'.format(log_req_record, response.status_code))
+            logger1.info('request info: {} status_code: {}'.format(log_req_record, response.status_code))
+        except Exception as e:
+            logger1.error(e)
 
     return response
 
