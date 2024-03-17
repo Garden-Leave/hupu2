@@ -81,7 +81,7 @@ def metric_write(response):
 if __name__ == '__main__':
     start_http_server(9090)
     try:
-        app.run()
+        app.run(host='0.0.0.0',port=5000)
         logger1.debug('flask main app started')
     except Exception as e:
         logger1.error(f'flask main app start failed:{e}')
