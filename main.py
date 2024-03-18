@@ -19,8 +19,9 @@ app = Flask('jack')
 def get_hp():
     num = int(request.args.get('num'))   # 必须转换为整数
     if num <= 0:
-        response = make_response('400：Bad Request, number should be > 0 ', 400, {"header": "test header"})
-        logger1.info('400：Bad Request, number should be > 0 status_code: {}'.format(response.status_code))
+        response1 = make_response('400：Bad Request, number should be > 0 ', 400, {"header": "test header"})
+        logger1.info('400：Bad Request, number should be > 0 status_code: {}'.format(response1.status_code))
+        return response1
     else:
         try:
             fetch_parse(num)
@@ -28,13 +29,14 @@ def get_hp():
         #print(request.environ.items())
             log_req_record=[request.environ['REQUEST_URI'], request.environ["REQUEST_METHOD"], request.environ['SERVER_PROTOCOL'],request.environ['REMOTE_ADDR'],request.environ['HTTP_USER_AGENT']]
         # logger.warning(log_req_record)
-            response = make_response(render_template('result.html'), 200, {"header": "test header"})
+            response2 = make_response(render_template('result.html'), 200, {"header": "test header"})
         #response = make_response(jsonify(result), 200, {"header1": "jordan"})
-            logger1.info('request info: {} status_code: {}'.format(log_req_record, response.status_code))
+            logger1.info('request info: {} status_code: {}'.format(log_req_record, response2.status_code))
+            return response2
         except Exception as e:
             logger1.error(e)
 
-    return response
+
 
 
 @app.route('/hello', methods=['GET'], endpoint='hello')
