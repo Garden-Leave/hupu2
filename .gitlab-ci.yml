@@ -4,5 +4,5 @@ deploy:
     entrypoint: ['']
   script:
     - kubectl config get-contexts
-    - kubectl config use-context path/to/agent/repository:agent-name
+    - kubectl config use-context gitlab-instance-15dda087/hupu2:myagent
     - kubectl get pods
